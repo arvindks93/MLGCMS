@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace DAL.CADB
 {
@@ -24,12 +25,24 @@ namespace DAL.CADB
             MySqlDataReader myReader = myCommand.ExecuteReader();
             return myReader;
         }
+        public DataTable GetDisconnectedData(MySqlConnection myconn, string strSQL)
+        {
+            myconn.Open();
+            MySqlCommand myCommand = myconn.CreateCommand();
+            MySqlDataAdapter ad = new MySqlDataAdapter(myCommand);
+            DataTable tables = new DataTable("SiteList");
+            ad.Fill(tables);
+            CloseConnection(myconn);
+            return tables;
+            
+        }
 
         public void NewTest()
         {
             string strSQL;
             strSQL = "SELECT * from site_lst";
             MySqlConnection myConn = GetConnectionObj();
+            MySqlDataAdapter mysqlad;
             MySqlDataReader myReader = GetData(myConn, strSQL);
             while (myReader.Read())
             {

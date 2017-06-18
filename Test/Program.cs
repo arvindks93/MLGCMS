@@ -13,7 +13,6 @@ namespace Test
             MLGDBTest mlgEFTest = new MLGDBTest();
             mlgEFTest.EFTest();
             Console.Read();
-            //Test commit.
         }
     }
 }
