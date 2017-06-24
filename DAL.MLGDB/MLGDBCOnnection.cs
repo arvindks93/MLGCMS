@@ -14,17 +14,11 @@ namespace DAL.MLGDB
         { }
         public virtual DbSet<Blog> Blogs { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
-        public virtual DbSet<SiteList> SiteLists { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             
         }
 
-    }
-    public class SiteList
-    {
-        public int SiteId { get; set; }
-        public string SiteBranch { get; set; }
     }
     public class Blog
     {
