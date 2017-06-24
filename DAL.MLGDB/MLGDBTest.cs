@@ -8,12 +8,12 @@ namespace DAL.MLGDB
         {
             using (var db = new MLGDBContext())
             {
-                var query = from p in db.Blogs 
-                            orderby p.BlogId
+                var query = from p in db.SiteLists 
+                            orderby p.SiteId
                             select p;
                 foreach (var item in query)
                 {
-                    Console.WriteLine("BlogId:{0} and Name:{1}", item.BlogId, item.Name);
+                    Console.WriteLine("SiteId:{0} and Name:{1}", item.SiteId, item.SiteBranch);
                 }
             }
         }

@@ -8,10 +8,11 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //DBConnection db = new DBConnection();
-            //db.NewTest();
-            MLGDBTest mlgEFTest = new MLGDBTest();
-            mlgEFTest.EFTest();
+            DBConnection db = new DBConnection();
+            db.NewTest();
+            //db.TestWithAdapter();
+            //MLGDBTest mlgEFTest = new MLGDBTest();
+            //mlgEFTest.EFTest();
             Console.Read();
         }
     }
