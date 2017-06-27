@@ -10,6 +10,7 @@ namespace MiscTestsAndPOC
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello");
         }
     }
 }
