@@ -10,7 +10,11 @@ namespace MiscTestsAndPOC
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+            // Console.WriteLine("Hello");
+            //MergeSorts ms = new MergeSorts();
+            //ms.TestMergeSort();
+            NewMerge nms = new NewMerge();
+            nms.MergeMain();
         }
     }
 }

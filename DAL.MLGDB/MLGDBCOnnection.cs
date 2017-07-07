@@ -18,6 +18,10 @@ namespace DAL.MLGDB
         {
             
         }
+        public void Save()
+        {
+            base.SaveChanges();
+        }
 
     }
     public class Blog
